@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "capistrano-confirm/version"
+require "capistrano/version"
 
 Gem::Specification.new do |s|
   s.name        = "capistrano-confirm"
-  s.version     = Capistrano::Confirm::VERSION
+  s.version     = CapistranoConfirm::VERSION
   s.authors     = ["Jinzhu"]
   s.email       = ["wosmvp@gmail.com"]
   s.homepage    = "https://github.com/jinzhu/capistrano-confirm"

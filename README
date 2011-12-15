@@ -15,7 +15,7 @@
   2, Require it in your deploy config file, it should be `config/deploy.rb` for rails
 
     require "bundler/setup"
-    require 'capistrano-confirm'
+    require 'capistrano/confirm'
 
   3, Only want to confirm for some stages? customize `confirm_stages` as your like.
 
