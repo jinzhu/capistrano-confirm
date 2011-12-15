@@ -1,0 +1,22 @@
+= Capistrano Confirm
+
+  Confirm before deploy.
+
+  Make sure you are not deploying the wrong branch, or remind you should deploy it after code review!
+
+== Usage:
+
+  1, Add it to your Gemfile:
+
+    gem 'capistrano-confirm'
+
+  2, Require it in your deploy config file, it should be `config/deploy.rb` for rails
+
+    require "bundler/setup"
+    require 'capistrano-confirm'
+
+
+== Author
+  Jinzhu Zhang
+  wosmvp@gmail.com
+  http://github.com/jinzhu
