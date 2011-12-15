@@ -2,7 +2,9 @@
 
   Confirm before deploy.
 
-  Make sure you are not deploying the wrong branch, or remind you should deploy it after code review!
+  Make sure you are not deploying the wrong branch, and remind you should deploy it after code review!
+
+  Please use it, because I write it after deployed a wrong branch to our production server! ;(
 
 == Usage:
 
@@ -15,6 +17,13 @@
     require "bundler/setup"
     require 'capistrano-confirm'
 
+  3, Only want to confirm for some stages? customize `confirm_stages` as your like.
+
+    For example, only want to confirm when deploying production, Add below to your deploy.rb
+      set :confirm_stages, "production"
+
+    Or confirm when deploying staging and production? Ok, Add something like this
+      set :confirm_stages, [:production, :staging]
 
 == Author
   Jinzhu Zhang
