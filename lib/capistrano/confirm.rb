@@ -2,7 +2,7 @@ def colorful(str, code="31")
   "\e[#{code}m#{str.upcase}\e[0m"
 end
 
-Capistrano::Configuration.instance.load do
+Capistrano::Configuration.instance(:must_exist).load do
   namespace :deploy do
     task :confirm do
       if (Array[confirm_stages].flatten.map(&:to_s).include?(stage.to_s) rescue true)
