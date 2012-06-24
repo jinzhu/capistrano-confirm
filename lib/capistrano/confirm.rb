@@ -27,7 +27,7 @@ Answer the below question to make sure you are not drunk!
         if (answer =~ /^\s*\d+\s*$/) && (answer.to_i == result)
           Capistrano::CLI.ui.say colorful("Deploying#{"."*71}", 33)
         else
-          Capistrano::CLI.ui.say colorful("Stoping#{"."*73}", 33)
+          Capistrano::CLI.ui.say colorful("Stopping#{"."*73}", 33)
           Capistrano::CLI.ui.say colorful("Difficult question for you? Your math must be taught by National Bureau of Statistics!") if (answer =~ /^\s*\d+\s*$/)
           abort
         end
