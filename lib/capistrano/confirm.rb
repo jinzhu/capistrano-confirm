@@ -1,3 +1,5 @@
+require 'capistrano'
+
 def colorful(str, code="31")
   "\e[#{code}m#{str.upcase}\e[0m"
 end
