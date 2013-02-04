@@ -10,14 +10,15 @@ Capistrano::Configuration.instance(:must_exist).load do
       if (Array[confirm_stages].flatten.map(&:to_s).include?(stage.to_s) rescue true)
         first_num, sencond_num = rand(10), rand(10)
 
-        result      = first_num + sencond_num
-        stage_info  = " #{colorful(stage)}" rescue ''
-        branch_info = " with branch #{colorful(branch)}" rescue ''
+        result           = first_num + sencond_num
+        stage_info       = " #{colorful(stage)}" rescue ''
+        branch_info      = " with branch #{colorful(branch)}" rescue ''
+        application_info = " #{colorful(application)}"
 
         Capistrano::CLI.ui.say %Q(
 #{colorful("="*80, 33)}
 
-You are deploying#{stage_info}#{branch_info}, Are you sure?
+You are deploying#{application_info}#{stage_info}#{branch_info}, Are you sure?
 Please make sure you did #{colorful("code review")}, and are not deploying the #{colorful("wrong branch")},
 Answer the below question to make sure you are not drunk!
   #{first_num} + #{sencond_num} = ?
